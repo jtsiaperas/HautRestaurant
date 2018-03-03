@@ -52,21 +52,24 @@
         if (data){
         for(var i = 0; i<data.length; i++)
         {
-          var number = i+i;
+          var number = i + 1;
           $("#tables").append(
-            "<div class='well'><h2 class='name'>"+data[i].name+"</h2></div>");
+            "<div class='well'><h2 class='name'><span class='label label-primary'>" + number + "</span>" + data[i].name + "</h2></div>");
         }
+        
         }
       });
       $.get("api/waitlist", function(data) {
         
         if (data){
+        
         for(var i = 0; i<data.length; i++)
         {
+          var number = i + 1;
           $("#waitlist").append(
-            "<div class='well'><h2 class='name'>"+data[i].name+"</h2></div>");
+            "<div class='well'><h2 class='name'><span class='label label-primary'>" + number + "</span>" + data[i].name + "</h2></div>");
         }
-        }
+      }
       });
     });
 
